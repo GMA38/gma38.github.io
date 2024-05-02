@@ -6,8 +6,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.core.mail import send_mail
 # Create your views here.
 
-def home(request):
-    return render(request, 'home.html')
+def index(request):
+    return render(request, 'index.html')
 
 
 def signup(request):
@@ -19,23 +19,23 @@ def signup(request):
 
         if User.objects.filter(username=username):
             messages.error(request, 'username already exist, try another username.')
-            return redirect('home')
+            return redirect('index')
         
         if User.objects.filter(email=email):
             messages.error(request, 'Email already registered!!')
-            return redirect('home')
+            return redirect('index')
         
         if len(username)>10:
             messages.error(request, 'Username should be less than 10 characters.')
-            return redirect('home')
+            return redirect('index')
         
         if password != confirmpassword:
             messages.error(request, 'Password does not match')
-            return redirect('home')
+            return redirect('index')
         
         if not username.isalnum():
             messages.error(request, 'Username name must be Alpha:numeric.')
-            return redirect('home')
+            return redirect('index')
 
 
 
@@ -52,7 +52,7 @@ def signup(request):
         to_list = [myuser.email]
 
         send_mail(subject, message, from_email, to_list, fail_silently= True) 
-        return redirect(home)
+        return redirect(index)
     return render(request, 'signup.html', )
 
 def signin(request):
@@ -65,7 +65,7 @@ def signin(request):
 
         if user is not None:
             login(request, user)
-            return render(request, 'home.html')
+            return render(request, 'index.html')
         else:
             messages.error(request, 'Bad Credentials')
             return redirect('todaysbooking')
@@ -74,7 +74,7 @@ def signin(request):
 def signout(request):
     logout(request)
     messages.success(request, 'Logged out successful')
-    return redirect('home')
+    return redirect('index')
     
 def todaysBooking(request):
     return render(request, 'todaysbooking.html')
