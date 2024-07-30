@@ -1,0 +1,220 @@
+/*-----------==========Google Font Import ----Poppins-----------=========*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+**{
+    border: o;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background-color: darkblue;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* background-image: url(scms1.jpeg);
+    background-size: cover;
+    background-attachment: fixed; */
+
+    
+}
+
+.div>form {
+    display: grid;
+    /* grid-auto-flow: row; */
+    grid-template-columns: repeat(auto-fit, 1fr);
+}
+
+ol {
+    list-style-position: inside;
+    align-items: center;
+    margin-left: 1em;
+}
+
+ol li {
+    padding: 0;
+}
+
+/* li {
+    display: inline;
+} */
+
+label{
+    font-weight: bold;
+}
+.inputText {
+    width: 200px;
+    height: 15px;
+    border: none;
+    border-radius: 2px;
+    padding-left: 8px;
+    
+}
+
+/* =========Aligning input text for options(#0084ff) 2 and 3 of the candidates======== */
+
+.input#presidentLastName2   {
+    margin-left: 900px;
+}
+
+
+#submit {
+    width: 300px;
+    height: 30px;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    padding-left: 7px;
+    color: black;
+    font-size: 16px;
+    transition: 0.3s ease;
+    
+}
+
+#reset {
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    padding-left: 7px;
+    color: black;
+    font-size: 16px;
+    transition: 0.3s ease;
+    
+}
+
+#submit:hover{
+    background-color: green;
+    color: snow;
+    cursor: pointer;
+    
+}
+
+#reset:hover{
+    background-color: green;
+    color: snow;
+
+    
+}
+
+
+@media only screen and (max-width:430px){
+    body {
+        display: block;
+        text-align: center;
+        background-color: darkblue;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .position-tester img{
+        margin: auto;
+    }
+
+    #submit {
+        width: 300px;
+        height: 30px;
+        background-color: red;
+        border: none;
+        border-radius: 10px;
+        padding-left: 7px;
+        color: black;
+        font-size: 16px;
+        transition: 0.3s ease;
+        
+    }
+
+    #reset {
+        width: 100px;
+        height: 30px;
+        background-color: red;
+        border: none;
+        border-radius: 10px;
+        padding-left: 7px;
+        color: black;
+        font-size: 16px;
+        transition: 0.3s ease;
+        
+    }
+    
+    #submit:hover{
+        background-color: green;
+        color: snow;
+        
+    }
+    
+    #reset:hover{
+        background-color: green;
+        color: snow;
+        
+    }
+
+}
+
+@media only screen and (min-width: 768px){
+    body {
+        display: block;
+        text-align: center;
+        background-color: darkblue;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    #submit {
+        width: 300px;
+        height: 30px;
+        background-color: red;
+        border: none;
+        border-radius: 10px;
+        padding-left: 7px;
+        color: black;
+        font-size: 16px;
+        transition: 0.3s ease;
+        
+    }
+
+    #reset {
+        width: 100px;
+        height: 30px;
+        background-color: red;
+        border: none;
+        border-radius: 10px;
+        padding-left: 7px;
+        color: black;
+        font-size: 16px;
+        transition: 0.3s ease;
+        
+    }
+    
+    #submit:hover{
+        background-color: green;
+        color: snow;
+        
+    }
+    
+    #reset:hover{
+        background-color: green;
+        color: snow;
+        
+    }
+
+}
+
+/* .success {
+    background: #9fd2a1;
+    padding: 5px 10px;
+    text-align: center;
+    color: #326b07;
+    border-radius: 3px;
+    font-synthesis: 14px;
+    margin-top: 10px;
+} */
