@@ -1,32 +1,32 @@
-// const scriptURL = "https://docs.google.com/spreadsheets/d/1oOghIz22_pu7dNhOf360uxx0xyJ0iS114V8mF720oT4/edit#gid=0" 
 
-// const form = document.forms['google-sheet']
-
-// form.addEventListener ('submit', e => {
-//     e.preventDefault()
-//     fetch (scriptURL, {method: 'POST', body: new FormData (form)})
-//     .then(response => alert("Thanks for Voting....!!!"))
-//     .catch(error => console.error('Error!', error.message))
-// })
-
+// Get the form element
 var form = document.getElementById('sheetdb-form');
+
+// Add an event listener for form submission
 form.addEventListener("submit", e => {
-  e.preventDefault();
-  fetch(form.action, {
-      method : "POST",
-      body: new FormData(document.getElementById("sheetdb-form")),
-  }).then(
-      response => response.json()
-  )
-  .then(response => alert("Thanks for Voting....!!!"))
-  
-  .catch(error => console.error('Error!', error.message))
+    e.preventDefault();
 
-  
+    // Submit form data to the specified action URL
+    fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Handle success - provide feedback and optionally redirect
+        alert("Your data was submitted successfully!");
+
+        // Uncomment the following line to redirect after submission
+        window.location.href = 'page2.html'; 
+    })
+    .catch(error => {
+        // Handle error - notify user
+        console.error('Error!', error.message);
+        alert("There was a problem with your submission. Please try again.");
+    });
 });
-
-
-
-    //  .then((html) => {
-    //     // you can put any JS code here
-    //     window.open('page2.html', '_blank');

@@ -4,307 +4,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBHS 2002 set database form  </title>
+    <title>BBHS 2002 Set Database Form</title>
     <link rel="stylesheet" href="./style01.css">
-    <link rel="icon" href="favicon (5).ico">
+    <link rel="icon" href="favicon (6).ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="position-tester">
-        <p><img src="./bbhs.jpg" alt="bbhs-photo"></p>
-    </div>
-    <h1>BBHS 2022 SET</h1>
-    <!---====<div class="error"></div>==========------>
-     <div class="form">
-        <form action="https://sheetdb.io/api/v1/tbn4p3ciymjnr" method="post" id="sheetdb-form">
-                <h2>Cast Your vote for your Candidate Below:</h2>
-                <!-- <p>Please note, you are required to fill in three candidates for each Position(s).</p> -->
-                <!--===========For President=========== -->
-                <!-- <div class="president"> -->
-               <ol>
-                    
-            <li><label for="votersCredentials"> Old Boys' Credentials:
-                </label>
-                <br><br>
-                <div class="votersCredentials">                               
-                <input class="inputText" placeholder="First Name(voters):" name="data[votersFirstName]" type="text" required>
-                <input class="inputText" placeholder="Last Name(voters):"name="data[votersLastName]" type="text" required>
+
+<header class="text-center mb-3">
+    <figure>
+        <img src="./bbhs.jpg" alt="BBHS Photo">
+    </figure>
+    <h1>BBHS 2002 SET</h1>
+</header>
+
+<section class="container bigContainer">
+    <form action="https://sheetdb.io/api/v1/tbn4p3ciymjnr" method="post" id="sheetdb-form">
+        <h4>Kindly note that every information provided is strictly confidential:</h4>
+        
+        <ol>
+            <!-- Old Boys' Credentials -->
+            <li>
+                <label for="oldBoyFirstName">Old Boys' Credentials:</label>
+                <div class="oldBoysCredentials input-group">
+                    <input class="form-control" placeholder="First Name (Old Boy)" name="data[oldBoyFirstName]" id="oldBoyFirstName" type="text" required>
+                    <input class="form-control" placeholder="Last Name (Old Boy)" name="data[oldBoyLastName]" id="oldBoyLastName" type="text" required>
                 </div>
-           </li>
+            </li>
 
-                <br><br>
+            <!-- Old Boys' Email -->
+            <li>
+                <label for="oldBoyEmail">Old Boys' Email:</label>
+                <input class="form-control" placeholder="Email (Old Boy)" name="data[oldBoyEmail]" id="oldBoyEmail" type="email" required>
+            </li>
 
-                <li><label for="votersEmail"> Voter's Email:
-                </label>
-                <br><br>
-                <div class="votersEmail">                                
-                <input class="inputText" value="Email(Voters):"name="data[votersEmail]" type="email" required>
-               </div>
-           </li>
+            <!-- Old Boys' Whatsapp Number -->
+            <li>
+                <label for="phone">Old Boys' Whatsapp Number:</label>
+                <input class="form-control" placeholder="Whatsapp Number" name="data[phone]" id="phone" type="tel" required>
+            </li>
 
-                <br><br>
+            <!-- Marital Status -->
+            <li>
+                <label for="maritalStatus">Marital Status:</label>
+                <select class="form-select" name="data[maritalStatus]" id="maritalStatus">
+                    <option value="NIL">NIL</option>
+                    <option value="SINGLE">SINGLE</option>
+                    <option value="MARRIED">MARRIED</option>
+                    <option value="SINGLE PARENT">SINGLE PARENT</option>
+                    <option value="WIDOWER">WIDOWER</option>
+                    <option value="COMPLICATED">COMPLICATED</option>
+                </select>
+            </li>
 
-                <li><label for="President"> Voter's Whatsapp Number:
-                </label>
-                <br><br>
-                <div class="phone">                             
-                <input class="inputText" value="2349063774018"name="data[phone]" type="tel" required>
-                </div>
-           </li>
+            <!-- Old Boys' Occupation -->
+            <li>
+                <label for="occupation">Old Boys' Occupation:</label>
+                <input class="form-control" placeholder="Occupation" name="data[occupation]" id="occupation" type="text" required>
+            </li>
 
-                <br><br>
-<!-- 
-                   <li><label for="President">Select Who you will like to vote for the post of President?
-                     <div class="president">                             
-                        <select name="data[myPresident]" >
-                            <option value="NIL">NIL</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select> -->
-                        <!-- <input    </label>   
-                        <br><br>
-                        class="inputText" id="presidentLastName1" placeholder="Last Name1(President):"name="presidentLastName1" type="text" required> 
-                        <br><br>
+            <!-- Number of Kids -->
+            <li>
+                <label for="noOfKids">Number of Kids:</label>
+                <input class="form-control" placeholder="Number of Kids" name="data[noOfKids]" id="noOfKids" type="number" min="0" max="10" required>
+            </li>
 
-                         <input class="inputText" id="myPresident2" placeholder="President2:"name="myPresident2" type="text" required>
-                        <input class="inputText" id="presidentLastName2" placeholder="Last Name2(President):"name="presidentLastName2" type="text" required> 
-                        <br><br>
+            <!-- Residential Address -->
+            <li>
+                <label for="residentialAddress">Residential Address:</label>
+                <input class="form-control" placeholder="Residential Address" name="data[residentialAddress]" id="residentialAddress" type="text" required>
+            </li>
 
-                        <input class="inputText" id="myPresident3" placeholder="President3:"name="myPresident3" type="text" required> 
-                         <input class="inputText" id="presidentLastName3" placeholder="Last Name3(President):"name="presidentLastName3" type="text" required> -->
-                    <!-- </div>
-                   </li>
-                        <br><br> -->
+            <!-- Phone Number of Next of Kin -->
+            <li>
+                <label for="phoneNumberOfNextOfKin">Phone Number of Next of Kin:</label>
+                <input class="form-control" placeholder="Phone Number of Next of Kin" name="data[phoneNumberOfNextOfKin]" id="phoneNumberOfNextOfKin" type="tel" required>
+            </li>
 
-                        <!--===========For Vice President=========== -->
+            <!-- Relationship with Next of Kin -->
+            <li>
+                <label for="relationshipWithNextOfKin">Relationship with Next of Kin:</label>
+                <input class="form-control" placeholder="Relationship with Next of Kin" name="data[relationshipWithNextOfKin]" id="relationshipWithNextOfKin" type="text" required>
+            </li>
+        </ol>
 
-                   
-                   <li> <label for="vicePresident">Select Who you will like to vote for the post of Vice President?</label>
-                    <br><br>
-                    <div class="vicePresident">
-                        <select name="data[myVicePresident]" >
-                            <option value="NIL">NIL</option>
-                            <!-- <option value="FRED">FRED</option> -->
-                            <option value="MR TOSIN">MR TOSIN</option>
-                            <!-- <option value="3">3</option>
-                            <option value="4">4</option> -->
-                        </select>
-                        <!-- <input class="inputText" id="vpLastName1" placeholder="Last Name1(Vice President): " name="vpLastName1" type="text" required> 
-                        <br><br>
-                        <input class="inputText" id="myVicePresident2" placeholder="Vice President2: " name="myVicePresident2" type="text" required>
-                         <input class="inputText" id="vpLastName2" placeholder="Last Name2(Vice President): " name="vpLastName2" type="text" required> 
-                        <br><br>
-                        <input class="inputText" id="myVicePresident3" placeholder="Vice President3: " name="myVicePresident3" type="text" required>
-                         <input class="inputText" id="vpLastName3" placeholder="Last Name3(Vice President): " 
-                name="vpLastName3" type="text" required> -->
-                    <!-- </div>
-                   </li> -->
-                        <br><br>
+        <div class="submit mt-4">
+            <input class="btn btn-primary" id="submit" type="submit" name="submit" value="Submit">
+            <input class="btn btn-secondary" type="reset" name="reset" id="reset" value="Reset">
+        </div>
+    </form>
+</section>
 
-                         <!--===========For Secretary=========== -->
+<footer class="text-center mt-5">
+    <p>A product of GMA &copy;2022-2024.</p>
+</footer>
 
-                
-                  <li> <label for="secretary">Select Who you will like to vote for Secretary?</label>
-                    <br><br>
-                    <div class="secretary">
-                        <select name="data[mySecretary]" >
-                            <option value="NIL">NIL</option>
-                            <option value="ADAORA">ADAORA</option>
-                            <option value="WINNIEFRED">WINNIEFRED</option>
-                            <!-- <option value="3">3</option>
-                            <option value="4">4</option> -->
-                        </select>
-                        <!-- <input class="inputText"  id="secretaryLastName1" placeholder="Last Name1(Secretary):"name="secretaryLastName1" type="text" required> 
-                        <br><br>
-                         <input class="inputText" id="mySecretary2" placeholder="Secretary2:"name="mySecretary2" type="text" required>
-                         <input class="inputText"  id="secretaryLastName2" placeholder="Last Name2(Secretary):"name="secretaryLastName2" type="text" required>
-                        <br><br>
-                        <input class="inputText" id="mySecretary3" placeholder="Secretary3:"name="mySecretary3" type="text" required>
-                        <input class="inputText"  id="secretaryLastName3" placeholder="Last Name3(Secretary):"name="secretaryLastName3" type="text" required> -->
-                    <!-- </div>
-                  </li> -->
-                        <br><br>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+<script src="./script6.js"></script>
 
-                        <!--===========For Welfare=========== -->
-
-                
-                  <li> <label for="welfare">Select Who you will like to vote for the post of Welfare?</label>
-                    <br><br>
-                    <div class="welfare">
-                        <select name="data[myWelfare]">
-                            <option value="NIL">NIL</option>
-                            <option value="BOLATITO FATOGUN">BOLATITO FATOGUN</option>
-                            <option value="OLUWASEUN OMOLE">OLUWASEUN OMOLE</option>
-                            <!-- <option value="3">3</option>
-                            <option value="4">4</option> -->
-                        </select>
-                    <!-- <input class="inputText" id="welfareLastName1" placeholder="Last Name(Welfare)1:" name="welfareLastName1" type="text" required>
-                    <br><br>
-                    <input class="inputText" id="myWelfare2" placeholder="Welfare2:" name="myWelfare2" type="text" required>
-                    <input class="inputText" id="welfareLastName2" placeholder="Last Name(Welfare)2:" name="welfareLastName2" type="text" required> 
-                    <br><br>
-                    <input class="inputText" id="myWelfare3" placeholder="Welfare3:" name="myWelfare3" type="text" required>
-                    <input class="inputText" id="welfareLastName3" placeholder="Last Name(Welfare)3:" name="welfareLastName3" type="text" required> -->
-                    <!-- </div>
-                  </li> -->
-                        <br><br>
-
-                        <!--===========For Deputy Welfare=========== -->
-
-                
-                  <li> <label for="deputyWelfare">Select Who you will like to vote for the post of Deputy Welfare?</label>
-                    <br><br>
-                    <div class="deputyWelfare">
-                        <select name="data[myDeputyWelfare]">
-                            <option value="NIL">NIL</option>
-                            <option value="SPADO">SPADO</option>
-                            <option value="SEUN ALLIANZ">SEUN ALLIANZ</option>
-                            <option value="CATHERINE ONAIFO">CATHERINE ONAIFO</option>
-                            <option value="ENO BASSEY">ENO BASSEY</option>
-                        </select>
-                     <!-- <input class="inputText"  id="deputyWelfareLastName1" placeholder="Last Name(Deputy Welfare)1:" name="deputyWelfareLastName1" type="text" required>
-                     <br><br>
-                      <input class="inputText" id="myDeputyWelfare2" placeholder="Deputy Welfare2:" name="myDeputyWelfare2" type="text" require>
-                     <input class="inputText"  id="deputyWelfareLastName2" placeholder="Last Name(Deputy Welfare)2:" name="deputyWelfareLastName2" type="text" required> 
-                     <br><br>
-                     <input class="inputText" id="myDeputyWelfare3" placeholder="Deputy Welfare3:" name="myDeputyWelfare3" type="text" require>
-                     <input class="inputText"  id="deputyWelfareLastName3" placeholder="Last Name(Deputy Welfare)3:" name="deputyWelfareLastName3" type="text" required> -->
-                     <!-- </div>
-                 </li> -->
-                        <br><br>
-
-                        <!--===========For Treasurer=========== -->
-
-                
-                 <li> <label for="treasurer">Select Who you will like to vote for the post of Treasurer?</label>
-                    <br><br>
-                    <div class="Treasurer">
-                        <select name="data[myTreasurer]">
-                            <option value="NIL">NIL</option>
-                            <option value="NGOZI OKOLI">NGOZI OKOLI</option>
-                            <option value="TOLULOPE AYO HOLLAR">TOLULOPE AYO HOLLAR</option>
-                            <option value="MR MUYIWA">MR MUYIWA</option>
-                            <!-- <option value="4">4</option> -->
-                        </select>
-                     <!-- <input class="inputText" id="treasurerLastName1" placeholder="Last Name(Treasurer)1:" name="treasurerLastName1" type="text" required>  
-                     <br><br>
-                     <input class="inputText"  id="myTreasurer2" placeholder="Treasurer2:" name="myTreasurer2" type="text" required>
-                      <input class="inputText" id="treasurerLastName2" placeholder="Last Name(Treasurer)2:" name="treasurerLastName2" type="text" required> 
-                     <br><br>
-                     <input class="inputText"  id="myTreasurer3" placeholder="Treasurer3:" name="myTreasurer3" type="text" required>
-                     <input class="inputText" id="treasurerLastName3" placeholder="Last Name(Treasurer)3:" name="treasurerLastName" type="text" required> -->
-                     <!-- </div>
-                 </li> -->
-                        <br><br>
-                
-
-                        <!--===========For Financial Secretary=========== -->
-
-                        
-                  <li> <label for="financialSecretary">Select Who you will like to vote for the post of Financial Secretary?
-                     </label>
-                     <br><br>
-                     <div class="financialSecretary">
-                        <select name="data[myFinancialSecretary]">
-                            <option value="NIL">NIL</option>
-                            <option value="CHINEDU OLEAH">CHINEDU OLEAH</option>
-                            <option value="EMMA LAKANU">EMMA LAKANU</option>
-                            <!-- <option value="3">3</option>
-                            <option value="4">4</option> -->
-                        </select>
-                     <!-- <input class="inputText"  id="financialSecretaryLastName1" placeholder="Last Name(Financial Secretary)1:" 
-                     name="financialSecretaryLastName1" type="text" required> 
-                     <br><br>
-                     <input class="inputText"  id="myFinancialSecretary2" placeholder="Financial Secretary2:" name="myFinancialSecretary2" type="text" required>
-                     <input class="inputText"  id="financialSecretaryLastName2" placeholder="Last Name(Financial Secretary)2:" 
-                     name="financialSecretaryLastName2" type="text" required>
-                     <br><br>
-                     <input class="inputText"  id="myFinancialSecretary3" placeholder="Financial Secretary3:" name="myFinancialSecretary3" type="text" required>
-                     <input class="inputText"  id="financialSecretaryLastName3" placeholder="Last Name(Financial Secretary)3:" 
-                     name="financialSecretaryLastName3" type="text" required> -->
-                     <!-- </div>
-                        
-                 </li> -->
-                        <br><br>
-
-                        <!--===========For Deputy Financial Secretary=========== -->
-
-                
-                 <!-- <li> <label for="deputyFinSec">Select Who you will like to vote for the post of Deputy Financial Secretary? </label>
-                    <br><br> -->
-                    <!-- <div class="deputyFinancialSecretary">
-                        <select name="data[myDeputyFinancialSecretary]">
-                            <option value="NIL">NIL</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select> -->
-                     <!-- <input class="inputText" id="deputyFinancialSecretaryLastname1" placeholder="Last Name(DeputyFinSec)1:" name="deputyFinancialSecretaryLastname1" type="text" required>
-                     <br><br>
-                     <input class="inputText" id="myDeputyFinancialSecretary2" placeholder="DeputyFinancialSecretary2:" name="myDeputyFinancialSecretary2" type="text" required>
-                     <input class="inputText" id="deputyFinancialSecretaryLastname2" placeholder="Last Name(DeputyFinSec)2:" name="deputyFinancialSecretaryLastname2" type="text" required>
-                     <br><br>
-                     <input class="inputText" id="myDeputyFinancialSecretary3" placeholder="DeputyFinancialSecretary3:" name="myDeputyFinancialSecretary3" type="text" required>
-                      <input class="inputText" id="deputyFinancialSecretaryLastname3" placeholder="Last Name(DeputyFinSec)3:" name="deputyFinancialSecretaryLastname3" type="text" required> -->
-                     <!-- </div>
-                 </li> -->
-                        <!-- <br><br> -->
-
-                        <!--===========For Deputy Social Secretary===========-->
-
-                 <li> <label for="socialSecretary">Select Who you will like to vote for the post of Social Secretary?</label>
-                    <br><br>
-                    <div class="socialSecretary">
-                        <select name="data[mySocialSecretary]" id="data[mySocialSecretary]" >
-                            <option value="NIL">NIL</option>
-                            <option value="KACHI NWANYA">KACHI NWANYA</option>
-                            <option value="PRECIOUS IJARA">PRECIOUS IJARA</option>
-                            <option value="MARYAM">MARYAM</option>
-                            <option value="DAYO ADETOLA">DAYO ADETOLA</option>
-                        </select>
-                     
-                     <!-- <input class="inputText" id="socialSecretaryLastname1" placeholder="Last Name(Social Secretary)1:" name="socialSecretaryLastname1" type="text" required> 
-                     <br><br>
-                     <input class="inputText"  id="mySocialSecretary2" placeholder="Social Secretary2:" name="mySocialSecretary2" type="text" required>
-                      <input class="inputText" id="socialSecretaryLastname2" placeholder="Last Name(Social Secretary)2:" name="socialSecretaryLastname2" type="text" required> 
-                     <br><br>
-                     <input class="inputText"  id="mySocialSecretary3" placeholder="Social Secretary3:" name="mySocialSecretary3" type="text" required>
-                     <input class="inputText" id="socialSecretaryLastname3" placeholder="Last Name(Social Secretary)3:" name="socialSecretaryLastname3" type="text" required> -->
-                     </div>
-                 </li>
-                
-                 </ol>
-                 <div class="submit">
-                    <input class="form-control button" id="submit" type="submit" name="submit" value="Submit">
-                    <input type="reset" name="reset" id="reset" value="Reset">
-                    </div>
-                
-
-                 </div>
-               </form>
-
-    </div>
-
-    <div class="footer">
-        <p>A product of GMA &copy;2022.</p>
-    </div>
-
-    
-    
-
-
-
-
-
-
-
-<!-- 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>-->
-    <script src="./script6.js"></script> 
 </body>
 </html>
