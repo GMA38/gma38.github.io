@@ -29,7 +29,19 @@ body {
     background-color: #1A5319;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 500px;
+    right: 100px;
 }
+
+
+/*  Styling the section header */
+.header {
+    position: relative;
+    left: 500px;
+    bottom: 120px;
+}
+
 
 /* Header Styling */
 header {
@@ -54,6 +66,7 @@ header h1 {
 
 .bigContainer h4 {
     color: #fff;
+    margin-bottom: 10px;
 }
 
 .bigContainer label {
@@ -69,6 +82,10 @@ form {
     margin-bottom: 10px;
 }
 
+ol {
+    color: #fff;
+}
+
 /* Submit and Reset Buttons */
 .submit {
     display: flex;
@@ -81,7 +98,9 @@ form {
 
 /* Footer Styling */
 footer {
-    margin-top: 40px;
     font-size: 0.9rem;
     color: #333;
+    position: relative;
+    top: 900px;
+    right: 550px;
 }
